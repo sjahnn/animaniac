@@ -22,3 +22,6 @@ animated.hist.kernel(x, nbreaks, bw.min, bw.max, bw.n = 20, outputname)
 \description{
 Animated histogram with varying kernel density estimates
 }
+\examples{
+animated.hist.kernel(x=iris$Sepal.Length, nbreaks=30, bw.min=0.1, bw.max=0.5, bw.n=20, outputname="animated1")
+}
