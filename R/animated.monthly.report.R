@@ -27,8 +27,8 @@ animated.monthly.report = function(data, start.date, end.date, months, outputnam
         # have missing value.
         stopifnot(is.character(start.date) == 1, is.character(end.date) ==1,
                   is.date(as.Date(start.date)) == 1, is.date(as.Date(end.date)) == 1, start.date < end.date,
-                  months %in% 1:12, rownames(data.frame(data))[1] >= as.Date(start.date),
-                  rownames(data.frame(data))[length(data)] <= as.Date(end.date) )
+                  months %in% 1:12, rownames(data.frame(data))[1] <= as.Date(start.date),
+                  rownames(data.frame(data))[length(data)] >= as.Date(end.date) )
 
 
         x = window(data, start=as.Date(start.date), end=as.Date(end.date))
