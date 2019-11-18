@@ -4,7 +4,7 @@
 \alias{animated.monthly.report}
 \title{Animated monthly plot}
 \usage{
-data(SanMartinoPPts)
+animated.monthly.report(data, start.date, end.date, months, outputname)
 }
 \arguments{
 \item{data}{Input data}

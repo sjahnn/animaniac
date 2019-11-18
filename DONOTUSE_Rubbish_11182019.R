@@ -6,6 +6,7 @@ setwd("..")
 #setwd("/Users/seungjunahn/Desktop/University of Florida/Biostatistical Computing/FinalProject/animaniac")
 install("animaniac")
 library(animaniac)
+# #' @usage data(SanMartinoPPts)
 
 ?animated.hist.kernel
 ?animated.monthly.report

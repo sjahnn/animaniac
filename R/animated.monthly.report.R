@@ -8,7 +8,6 @@
 #'
 #' @importFrom assertthat is.date
 #' @importFrom hydroTSM daily2monthly
-#' @usage data(SanMartinoPPts)
 #'
 #' @export
 #'
