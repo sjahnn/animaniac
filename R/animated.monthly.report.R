@@ -7,6 +7,7 @@
 #' @param outputname Name of the animated monthly plot
 #'
 #' @importFrom assertthat is.date
+#' @usage data(SanMartinoPPts)
 #'
 #' @return
 #' @export
