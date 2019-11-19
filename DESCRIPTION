@@ -1,11 +1,11 @@
 Package: animaniac
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Generate an animated plots (convert multiple images to one GIF file)
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
+Author: Seungjun Ahn
+Maintainer: Seungjun Ahn <sahn1@ufl.edu>
+Description: This package converts multiple images into an animated plot in GIF format. 
+    This can be useful when we want to visualize the changes over time.
 License: What license is it under?
 Encoding: UTF-8
 LazyData: true
