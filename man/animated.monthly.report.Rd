@@ -21,5 +21,7 @@ animated.monthly.report(data, start.date, end.date, months, outputname)
 Animated monthly plot
 }
 \examples{
-animated.monthly.report(data=SanMartinoPPts, start.date="1970-01-01", end.date="1989-12-31", months=1:12, outputname="animated2")
+setwd("/Users/seungjunahn/Documents/temp") #set the directory with a new folder
+animated.monthly.report(data=SanMartinoPPts, start.date="1970-01-01",
+end.date="1989-12-31", months=1:12, outputname="animated2")
 }

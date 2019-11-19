@@ -1,6 +1,6 @@
 Package: animaniac
 Type: Package
-Title: Generate an animated plots (convert multiple images to one GIF file)
+Title: Animaniac - Generate an Animated GIF from Multiple Plots 
 Version: 0.1.0
 Author: Seungjun Ahn
 Maintainer: Seungjun Ahn <sahn1@ufl.edu>

@@ -11,7 +11,9 @@
 #'
 #' @export
 #'
-#' @examples animated.monthly.report(data=SanMartinoPPts, start.date="1970-01-01", end.date="1989-12-31", months=1:12, outputname="animated2")
+#' @examples setwd("/Users/seungjunahn/Documents/temp") #set the directory with a new folder
+#' @examples animated.monthly.report(data=SanMartinoPPts, start.date="1970-01-01",
+#' end.date="1989-12-31", months=1:12, outputname="animated2")
 animated.monthly.report = function(data, start.date, end.date, months, outputname){
 
         # The function will not run if any of conditions below occurs:

@@ -12,6 +12,7 @@
 #'
 #' @export
 #'
+#' @examples setwd("/Users/seungjunahn/Documents/temp") #set the directory with a new folder
 #' @examples animated.hist.kernel(x=iris$Sepal.Length, nbreaks=30, bw.min=0.1, bw.max=0.5, bw.n=20, outputname="animated1")
 animated.hist.kernel = function(x, nbreaks, bw.min, bw.max, bw.n=20, outputname){
         # The function will not run if any of conditions below occurs:
