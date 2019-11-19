@@ -12,7 +12,6 @@
 #'
 #' @export
 #'
-#' @examples setwd("/Users/seungjunahn/Documents/temp") #set the directory with a new folder
 #' @examples animated.hist.kernel(x=iris$Sepal.Length, nbreaks=30, bw.min=0.1, bw.max=0.5, bw.n=20, outputname="animated1")
 animated.hist.kernel = function(x, nbreaks, bw.min, bw.max, bw.n=20, outputname){
         # The function will not run if any of conditions below occurs:
@@ -39,8 +38,4 @@ animated.hist.kernel = function(x, nbreaks, bw.min, bw.max, bw.n=20, outputname)
         png_files = list.files(pattern=".*png$", full.names=TRUE)
         gifski(png_files, gif_file=paste(outputname,".gif",sep=""), width=800, height=600, delay=0.5)
 
-        # We do not want all of PNG files created, and we get our GIF (animated plots) ONLY!
-        # Again, please make sure you create a new empty folder for animated plots without
-        # PNG files. Otherwise, the command below will also remove your existing PNG files.
-        file.remove(list.files(pattern=".png"))
 }

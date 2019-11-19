@@ -1,16 +1,17 @@
 library(devtools)
 library(roxygen2)
 
-#document()
-setwd("..")
 #setwd("/Users/seungjunahn/Desktop/University of Florida/Biostatistical Computing/FinalProject/animaniac")
+#devtools::document(".")
+#document()
+
+setwd("..")
 install("animaniac")
 library(animaniac)
 # #' @usage data(SanMartinoPPts)
 
 ?animated.hist.kernel
 ?animated.monthly.report
-
 
 setwd("/Users/seungjunahn/Desktop/University of Florida/Biostatistical Computing/FinalProject/TempPNG")
 
