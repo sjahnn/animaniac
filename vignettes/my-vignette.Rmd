@@ -1,0 +1,64 @@
+---
+title: "Introduction to Animaniac"
+author: Seungjun Ahn
+date: November 21, 2019
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{my-vignette}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(animaniac)
+```
+
+## 1. Introduction
+In general, we create multiple plots to see how our results would change over time or varing with some adjustments. We normally include them as subfigures in a paper. Data visualizations are without doubt very helpful summarizing the data, but it may not efficiently do so, when there are excessive numbers of them. \
+
+Thus, I wanted to create a package that produces a single plot visualizing changes or patterns more dynamically -- i.e. animated plot. In particular, this package enables generating an animated histogram with a smoothing curve which varies with its bandwidth specification (bandwidth min/max and number of bandwidth). `iris` dataset is used for the example. The package can also be utilized for creating an animated barplot, summarizing the pattern for the specified duration. An example dataset (`SanMartinoPPts` from package `hydroTSM`) is provided for a better understanding of the use of the two functions.
+
+
+## 2. Install animaniac from Github using devtools package
+```{r chunk_name, results="hide"}
+devtools::install_github("sjahnn/animaniac", force=TRUE)
+```
+<p style="color:red"> **ATTENTION**: Please create a new folder and make it as your working directory with setwd(), you use this package. Otherwise, it will be hard to keep track. </p>
+
+## 3. Animated Histogram with Kernal Density Estimates (animated.hist.kernel)
+```{r}
+animated.hist.kernel(x=iris$Sepal.Length, nbreaks=30, bw.min=0.1, bw.max=0.5, bw.n=20, outputname="animated1")
+```
+You can change `nbreaks` and bandwidth specifications (namely `bw.min`, `bw.max`, and `bw.n`). The example code will generate 20 (default) animated histograms, and it illustrates that larger bandwidth specificiation leads to smoother (flat) density estimates. Conversely, a histogram with a smaller bandwidth specificiation has more localized density estimates. \
+
+Check your working directory. You will be able to find 20 plots (in PNG format) and an animated plot (in GIF format).
+
+<p style="color:red"> **NOTE#1**: If you prefer to have the animated plot ONLY, you can do so with the following: </p>
+
+```{r, eval=FALSE, echo=TRUE} 
+file.remove(list.files(pattern=".png"))
+```
+
+<p style="color:red"> However, this will delete all of your PNG files in the specified working directory, so make sure you create a new folder before you work with this package. </p> \
+
+<p style="color:red"> **NOTE#2**: For Mac users, you will need to open your generated animated plot (in GIF format) with Safari (Right Click, Open With, then Select Safari). </p>
+
+## 4. Animated Monthly Plot (animated.monthly.report)
+```{r}
+animated.monthly.report(data=SanMartinoPPts, start.date="1970-01-01", end.date="1989-12-31", months=1:12, outputname="animated2")
+```
+`SanMartinoPPts` was used as an example dataset to create an animated monthly plot. The dataset is from `hydroTSM` package, and contains a record of daily precipitation from January 1st, 1921 to December 31st 1990, measured at San Martino di Castrozza, Trento Province, Italy. `animated.monthly.report` will generate an animated barplot for the specified duration. The example code will print out 20 barplots (one plot for each year; therefore, total 20 plots for 1970-1989), summarizing precipitation for the specified month, adjustable `months` option. \
+
+
+Again, you will not be able to see the output in R. Please check your working directory to view your plots.
+
+<p style="color:red"> **NOTE#1** In case, you want to keep your animated barplot ONLY, please refer to NOTE#1 for Animated Histogram. </p> \
+
+<p style="color:red"> **NOTE#2**: For Mac users, you will need to open your generated animated plot (in GIF format) with Safari (Right Click, Open With, then Select Safari). </p>
