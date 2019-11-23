@@ -23,7 +23,7 @@ library(animaniac)
 ## 1. Introduction
 In general, we create multiple plots to see how our results would change over time or varing with some adjustments. We normally include them as subfigures in a paper. Data visualizations are without doubt very helpful summarizing the data, but it may not efficiently do so, when there are excessive numbers of them. \
 
-Thus, I wanted to create a package that produces a single plot visualizing changes or patterns more dynamically -- i.e. animated plot. In particular, this package enables generating an animated histogram with a smoothing curve which varies with its bandwidth specification (bandwidth min/max and number of bandwidth). `iris` dataset is used for the example. The package can also be utilized for creating an animated barplot, summarizing the pattern for the specified duration. An example dataset (`SanMartinoPPts` from package `hydroTSM`) is provided for a better understanding of the use of the two functions.
+Thus, I wanted to create a package that produces a single plot visualizing changes or patterns more dynamically -- i.e. animated plot. In particular, this package enables generating an animated histogram with a smoothing curve which varies with its bandwidth specification (bandwidth min/max and number of bandwidth). `iris` dataset is used for the example. The package can also be utilized for creating an animated barplot, summarizing the pattern for the specified duration. An example dataset (`SanMartinoPPts` from package `hydroTSM`) is provided for a better understanding of this.
 
 
 ## 2. Install animaniac from Github using devtools package
